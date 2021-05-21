@@ -6,7 +6,7 @@
 /*   By: yongjule <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 17:16:22 by yongjule          #+#    #+#             */
-/*   Updated: 2021/05/07 14:36:35 by yongjule         ###   ########.fr       */
+/*   Updated: 2021/05/18 17:45:42 by yongjule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,11 @@ int		ft_atoi(const char *str)
 			return (-1);
 	}
 	return (sign * num);
+}
+
+#include <stdio.h>
+int main(int argc, char **argv)
+{
+
+	printf("%d %d",atoi(argv[1]), ft_atoi(argv[1]));
 }

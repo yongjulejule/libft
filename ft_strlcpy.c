@@ -6,7 +6,7 @@
 /*   By: yongjule <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/07 09:13:03 by yongjule          #+#    #+#             */
-/*   Updated: 2021/05/09 20:33:56 by yongjule         ###   ########.fr       */
+/*   Updated: 2021/05/18 20:29:55 by yongjule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	idx;
 
 	if (dst == NULL)
-		return (0);
+		return (1);
 	idx = 0;
 	while (idx < dstsize && (*(src + idx) != 0))
 	{
@@ -29,12 +29,4 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	else if (idx != 0)
 		*(dst + idx - 1) = '\0';
 	return (ft_strlen(src));
-}
-
-#include <string.h>
-int main()
-{
-	ft_strlcpy(NULL, NULL, 10);
-	write(1, "1\n", 2);
-	strlcpy(NULL, NULL, 10);
 }

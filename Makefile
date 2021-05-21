@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror 
 NAME = libft.a
 SRCS = ft_memset.c\
 	   ft_memcpy.c\
@@ -38,7 +38,8 @@ SRCS = ft_memset.c\
 
 OBJS = ${SRCS:.c=.o}
 
-BONUS_SRCS = ft_lstnew.c\
+BONUS_SRCS = ${SRCS}\
+			 ft_lstnew.c\
 			 ft_lstadd_front.c\
 			 ft_lstsize.c\
 			 ft_lstlast.c\
@@ -68,5 +69,5 @@ fclean: clean
 re: fclean all
 
 .PHONY: bonus
-bonus: $(BONUS_OBJS)
+bonus: $(BONUS_OBJS) 
 	ar cr $(NAME) $(BONUS_OBJS)
